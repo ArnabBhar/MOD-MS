@@ -17,6 +17,7 @@ public class AuthenticationController {
 
     @RequestMapping(method= RequestMethod.POST, value="/user/signup")
     public void addUser(@RequestBody UserDetailsEntity user) {
+
         service.addUser(user);
     }
 
