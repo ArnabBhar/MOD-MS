@@ -30,7 +30,7 @@ public class AuthenticationController {
         return service.getUsers();
     }
 
-    @RequestMapping("/user/user-list")
+    @RequestMapping("/mentor/mentor-list")
     public List<MentorDetailsEntity> getMentors() {
         return service.getMentors();
     }
