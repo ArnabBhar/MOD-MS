@@ -114,5 +114,5 @@ public class MentorDetailsEntity {
 	public void setRating(float rating) {
 		this.rating = rating;
 	}
-	
+
 }
