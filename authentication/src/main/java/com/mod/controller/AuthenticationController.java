@@ -5,10 +5,12 @@ import com.mod.entity.MentorDetailsEntity;
 import com.mod.entity.UserDetailsEntity;
 import com.mod.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@EnableEurekaClient
 @RestController
 public class AuthenticationController {
 
@@ -17,7 +19,6 @@ public class AuthenticationController {
 
     @RequestMapping(method= RequestMethod.POST, value="/user/signup")
     public void addUser(@RequestBody UserDetailsEntity user) {
-
         service.addUser(user);
     }
 
