@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 //@Entity
 //@Table(name="mentor_details")
-public class MentorDetailsEntity {
+public class MentorEntity {
 	
 //	@Id
 //	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -29,11 +29,11 @@ public class MentorDetailsEntity {
 //	@JoinColumn(name="actor_id")
 	private ActorsEntity actor;
 	
-	public MentorDetailsEntity() {
+	public MentorEntity() {
 		super();
 	}
 
-	public MentorDetailsEntity(String mentorName, String mentorEmail, Integer mentorYearsExp, String mentorLinkdinUrl, String mentorPhone, Integer trainings, float rating) {
+	public MentorEntity(String mentorName, String mentorEmail, Integer mentorYearsExp, String mentorLinkdinUrl, String mentorPhone, Integer trainings, float rating) {
 		this.mentorName = mentorName;
 		this.mentorEmail = mentorEmail;
 		this.mentorYearsExp = mentorYearsExp;

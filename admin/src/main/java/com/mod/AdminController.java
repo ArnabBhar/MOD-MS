@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-//@RestController
-//@RequestMapping("/admin")
+@RestController
+@RequestMapping("/admin")
 public class AdminController {
 
     @Autowired

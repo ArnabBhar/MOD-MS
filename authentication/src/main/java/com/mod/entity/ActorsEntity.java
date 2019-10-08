@@ -5,15 +5,13 @@ import javax.persistence.*;
 @Entity
 @Table(name="actors")
 public class ActorsEntity {
-
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="actor_id")
-	private Integer actorId;
-	public void setUserDetails(UserDetailsEntity userDetails) {
-		this.userDetails = userDetails;
-	}
-
+	@GeneratedValue
+	@Column(name="id")
+	private Integer id;
+//	public void setUserDetails(UserDetailsEntity userDetails) {
+//		this.userDetails = userDetails;
+//	}
 	@Column(name="actor_email")
 	private String actorEmail;
 	@Column(name="actor_password")
@@ -23,13 +21,13 @@ public class ActorsEntity {
 	@Column(name="actor_status")
 	private Boolean actorStatus;
 	
-	@OneToOne(targetEntity=UserDetailsEntity.class,cascade= CascadeType.ALL)
-	@JoinColumn(name="user_id")
-	private UserDetailsEntity userDetails;
-	
-	@OneToOne(targetEntity=MentorDetailsEntity.class)
-	@JoinColumn(name="mentor_id")
-	private MentorDetailsEntity mentorDetails;
+//	@OneToOne(targetEntity=UserDetailsEntity.class,cascade= CascadeType.ALL)
+//	@JoinColumn(name="user_id")
+//	private UserDetailsEntity userDetails;
+//
+//	@OneToOne(targetEntity=MentorDetailsEntity.class)
+//	@JoinColumn(name="mentor_id")
+//	private MentorDetailsEntity mentorDetails;
 	
 
 	public ActorsEntity() {
@@ -44,13 +42,13 @@ public class ActorsEntity {
 		this.actorStatus = actorStatus;
 	}
 
-	public void setMentorDetails(MentorDetailsEntity mentorDetails) {
-		this.mentorDetails = mentorDetails;
-	}
+//	public void setMentorDetails(MentorDetailsEntity mentorDetails) {
+//		this.mentorDetails = mentorDetails;
+//	}
 
 
 	public Integer getId() {
-		return actorId;
+		return id;
 	}
 
 	public String getActorEmail() {

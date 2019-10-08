@@ -47,7 +47,7 @@ public class AuthenticationController {
         return service.getMentor(id);
     }
 
-    @RequestMapping("/login/{accountType}/{userName}")
+    @RequestMapping("/actordetails/{accountType}/{userName}")
     public ActorsEntity getUserCred(@PathVariable String accountType, @PathVariable String userName){
         return service.getUserName(accountType, userName);
     }
@@ -70,6 +70,12 @@ public class AuthenticationController {
     @RequestMapping(method=RequestMethod.DELETE, value="/mentor/delete/{id}")
     public void deleteMentor(@PathVariable Integer id) {
         service.deleteMentor(id);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/block-unblock/{id}")
+    public Boolean blockUnblock(@RequestBody ActorsEntity actor, @PathVariable Integer id) {
+        service.updateActor(actor, id);
+        return true;
     }
 
 }

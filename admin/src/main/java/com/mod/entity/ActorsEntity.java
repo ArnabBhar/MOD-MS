@@ -1,7 +1,5 @@
 package com.mod.entity;
 
-import javax.persistence.*;
-
 //@Entity
 //@Table(name="actors")
 public class ActorsEntity {
@@ -9,7 +7,7 @@ public class ActorsEntity {
 //	@Id
 //	@GeneratedValue(strategy=GenerationType.IDENTITY)
 //	@Column(name="actor_id")
-	private Integer actorId;
+	private Integer id;
 	public void setUserDetails(UserEntity userDetails) {
 		this.userDetails = userDetails;
 	}
@@ -29,7 +27,7 @@ public class ActorsEntity {
 	
 //	@OneToOne(targetEntity=MentorDetailsEntity.class)
 //	@JoinColumn(name="mentor_id")
-	private MentorDetailsEntity mentorDetails;
+	private MentorEntity mentorDetails;
 	
 
 	public ActorsEntity() {
@@ -44,13 +42,13 @@ public class ActorsEntity {
 		this.actorStatus = actorStatus;
 	}
 
-	public void setMentorDetails(MentorDetailsEntity mentorDetails) {
+	public void setMentorDetails(MentorEntity mentorDetails) {
 		this.mentorDetails = mentorDetails;
 	}
 
 
 	public Integer getId() {
-		return actorId;
+		return id;
 	}
 
 	public String getActorEmail() {
