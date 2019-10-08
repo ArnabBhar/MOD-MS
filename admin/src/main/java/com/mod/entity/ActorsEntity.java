@@ -1,33 +1,33 @@
 package com.mod.entity;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name="actors")
+//@Entity
+//@Table(name="actors")
 public class ActorsEntity {
-	@Id
-	@GeneratedValue
-	@Column(name="id")
+
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@Column(name="actor_id")
 	private Integer id;
-//	public void setUserDetails(UserDetailsEntity userDetails) {
-//		this.userDetails = userDetails;
-//	}
-	@Column(name="actor_email")
+	public void setUserDetails(UserEntity userDetails) {
+		this.userDetails = userDetails;
+	}
+
+//	@Column(name="actor_email")
 	private String actorEmail;
-	@Column(name="actor_password")
+//	@Column(name="actor_password")
 	private String actorPassword;
-	@Column(name="actor_type")
+//	@Column(name="actor_type")
 	private String actorType;
-	@Column(name="actor_status")
+//	@Column(name="actor_status")
 	private Boolean actorStatus;
 	
-//	@OneToOne(targetEntity=UserDetailsEntity.class,cascade= CascadeType.ALL)
+//	@OneToOne(targetEntity= UserEntity.class,cascade= CascadeType.ALL)
 //	@JoinColumn(name="user_id")
-//	private UserDetailsEntity userDetails;
-//
+	private UserEntity userDetails;
+	
 //	@OneToOne(targetEntity=MentorDetailsEntity.class)
 //	@JoinColumn(name="mentor_id")
-//	private MentorDetailsEntity mentorDetails;
+	private MentorEntity mentorDetails;
 	
 
 	public ActorsEntity() {
@@ -42,9 +42,9 @@ public class ActorsEntity {
 		this.actorStatus = actorStatus;
 	}
 
-//	public void setMentorDetails(MentorDetailsEntity mentorDetails) {
-//		this.mentorDetails = mentorDetails;
-//	}
+	public void setMentorDetails(MentorEntity mentorDetails) {
+		this.mentorDetails = mentorDetails;
+	}
 
 
 	public Integer getId() {

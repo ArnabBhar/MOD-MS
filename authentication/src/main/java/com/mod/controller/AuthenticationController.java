@@ -5,10 +5,12 @@ import com.mod.entity.MentorDetailsEntity;
 import com.mod.entity.UserDetailsEntity;
 import com.mod.service.AuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@EnableEurekaClient
 @RestController
 public class AuthenticationController {
 
@@ -17,7 +19,6 @@ public class AuthenticationController {
 
     @RequestMapping(method= RequestMethod.POST, value="/user/signup")
     public void addUser(@RequestBody UserDetailsEntity user) {
-
         service.addUser(user);
     }
 
@@ -46,7 +47,7 @@ public class AuthenticationController {
         return service.getMentor(id);
     }
 
-    @RequestMapping("/login/{accountType}/{userName}")
+    @RequestMapping("/actordetails/{accountType}/{userName}")
     public ActorsEntity getUserCred(@PathVariable String accountType, @PathVariable String userName){
         return service.getUserName(accountType, userName);
     }
@@ -69,6 +70,12 @@ public class AuthenticationController {
     @RequestMapping(method=RequestMethod.DELETE, value="/mentor/delete/{id}")
     public void deleteMentor(@PathVariable Integer id) {
         service.deleteMentor(id);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/block-unblock/{id}")
+    public Boolean blockUnblock(@RequestBody ActorsEntity actor, @PathVariable Integer id) {
+        service.updateActor(actor, id);
+        return true;
     }
 
 }
