@@ -13,7 +13,7 @@ public class MentorSkills {
 	@Id
 	@GeneratedValue(strategy=GenerationType.TABLE)
 	@Column(name="skill_id")
-	private int skillId;
+	private Integer skillId;
 	private  String skillName;
 	
 	@ManyToOne
@@ -21,7 +21,6 @@ public class MentorSkills {
 	
 	public MentorSkills() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public MentorDetails getMd() {
 		return md;
