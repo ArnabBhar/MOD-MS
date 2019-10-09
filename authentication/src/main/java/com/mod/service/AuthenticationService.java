@@ -23,17 +23,11 @@ public class AuthenticationService {
     MentorRepository mentor;
 
     public void addUser(UserDetailsEntity usr) {
-        ActorsEntity act = usr.getActor();
-//        act.setUserDetails(usr);
         user.save(usr);
-//        actor.save(act);
     }
 
     public void addMentor(MentorDetailsEntity ment) {
-        ActorsEntity act = ment.getActor();
-//        act.setMentorDetails(ment);
         mentor.save(ment);
-//        actor.save(act);
     }
 
     public List<UserDetailsEntity> getUsers() {
@@ -78,13 +72,5 @@ public class AuthenticationService {
 
     public void updateActor(ActorsEntity act, Integer id) {
         actor.save(act);
-    }
-
-    public void unblockUser(Integer id) {
-        user.unblockUser(id);
-    }
-
-    public void updateMentor(MentorDetailsEntity ment, Integer id) {
-        mentor.save(ment);
     }
 }
