@@ -14,6 +14,7 @@ import com.example.demo.Entity.MentorSkills;
 import com.example.demo.service.MentorDetailsService;
 import com.example.demo.service.MentorSkillsService;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @EnableEurekaClient
 @RestController
 public class MentorController {
