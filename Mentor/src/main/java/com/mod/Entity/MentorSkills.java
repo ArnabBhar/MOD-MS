@@ -7,19 +7,19 @@ import javax.persistence.*;
 public class MentorSkills {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.TABLE)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="skill_id")
 	private Integer skillId;
-	@Column(name="skill_name")
-	private  String skillName;
+	@Column(name="tech_id")
+	private Integer techId;
 	@Column(name="mentor_id")
 	private Integer mentorId;
 
 	public MentorSkills() {
 	}
 
-	public MentorSkills(String skillName, Integer mentorId) {
-		this.skillName = skillName;
+	public MentorSkills(Integer techId, Integer mentorId) {
+		this.techId = techId;
 		this.mentorId = mentorId;
 	}
 
@@ -27,12 +27,12 @@ public class MentorSkills {
 		return skillId;
 	}
 
-	public String getSkillName() {
-		return skillName;
+	public Integer getSkillName() {
+		return techId;
 	}
 
-	public void setSkillName(String skillName) {
-		this.skillName = skillName;
+	public void setSkillName(Integer techId) {
+		this.techId = techId;
 	}
 
 	public Integer getMentorId() {
@@ -41,5 +41,13 @@ public class MentorSkills {
 
 	public void setMentorId(Integer mentorId) {
 		this.mentorId = mentorId;
+	}
+
+	public Integer getTechId() {
+		return techId;
+	}
+
+	public void setTechId(Integer techId) {
+		this.techId = techId;
 	}
 }

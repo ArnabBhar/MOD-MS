@@ -71,9 +71,9 @@ public class CourseController {
 		cs.addCourse(cd);
 		
 	}
-	@RequestMapping(method=RequestMethod.PUT,value="/course/update/{id}")
-	public void updateCourse(@RequestBody CourseDetails cd, @PathVariable Integer id) {
-		cs.updateCourse(cd, id);
+	@RequestMapping(method=RequestMethod.PUT,value="/course/update")
+	public void updateCourse(@RequestBody CourseDetails cd) {
+		cs.updateCourse(cd);
 	}
 
 	@RequestMapping("/course/user/{id}")

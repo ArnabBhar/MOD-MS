@@ -16,7 +16,7 @@ public class MentorSkillsService {
 	@Autowired
 	private MentorSkillsRepo msr;
 
-	public List<MentorSkills> getSkills(String skillName) {
+	public List<MentorSkills> getSkills(Integer skillName) {
 		return msr.getSkills(skillName);
 	}
 	

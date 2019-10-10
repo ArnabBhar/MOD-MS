@@ -30,7 +30,7 @@ public class CourseService {
 		courseRepo.save(cd);
 	}
 
-	public void updateCourse(CourseDetails cd,Integer id) {
+	public void updateCourse(CourseDetails cd) {
 		courseRepo.save(cd);
 	}
 

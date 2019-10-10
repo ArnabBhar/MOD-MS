@@ -7,21 +7,22 @@ public class CourseDetails {
 
 	private Integer courseId;
 	private Float fees;
+	private String timeSlot;
 	private Date startDate;
 	private String courseStatus;
 	private Integer courseProgress;
 	private Date endDate;
 	private Integer user;
 	private Integer mentor;
-
-	private Technology tech;
+	private Integer techId;
 
 	public CourseDetails() {
 		super();
 	}
 
-	public CourseDetails(Float fees, Date startDate, String courseStatus, Integer courseProgress, Date endDate, Integer user, Integer mentor, Technology tech) {
+	public CourseDetails(Float fees, String timeSlot, Date startDate, String courseStatus, Integer courseProgress, Date endDate, Integer user, Integer mentor, Technology tech) {
 		this.fees = fees;
+		this.timeSlot = timeSlot;
 		this.startDate = startDate;
 		this.courseStatus = courseStatus;
 		this.courseProgress = courseProgress;
@@ -39,40 +40,48 @@ public class CourseDetails {
 		return fees;
 	}
 
-	public Date getStartDate() {
-		return startDate;
-	}
-
-	public String getCourseStatus() {
-		return courseStatus;
-	}
-
-	public Date getEndDate() {
-		return endDate;
-	}
-
-	public Technology getTech() {
-		return tech;
-	}
-
 	public void setFees(Float fees) {
 		this.fees = fees;
+	}
+
+	public String getTimeSlot() {
+		return timeSlot;
+	}
+
+	public void setTimeSlot(String timeSlot) {
+		this.timeSlot = timeSlot;
+	}
+
+	public Date getStartDate() {
+		return startDate;
 	}
 
 	public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
 
+	public String getCourseStatus() {
+		return courseStatus;
+	}
+
 	public void setCourseStatus(String courseStatus) {
 		this.courseStatus = courseStatus;
 	}
 
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
+	public Integer getCourseProgress() {
+		return courseProgress;
 	}
 
-	public void setTech(Technology tech) {
-		this.tech = tech;
+	public void setCourseProgress(Integer courseProgress) {
+		this.courseProgress = courseProgress;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 	public Integer getUser() {
@@ -91,11 +100,11 @@ public class CourseDetails {
 		this.mentor = mentor;
 	}
 
-	public Integer getCourseProgress() {
-		return courseProgress;
+	public Technology getTech() {
+		return tech;
 	}
 
-	public void setCourseProgress(Integer courseProgress) {
-		this.courseProgress = courseProgress;
+	public void setTech(Technology tech) {
+		this.tech = tech;
 	}
 }

@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @EnableEurekaClient
+@CrossOrigin(origins = "http://localhost:4200")
 public class MentorController {
 
 	@Autowired
@@ -22,12 +23,12 @@ public class MentorController {
 	@Autowired
 	private MentorCalendarService mcs;
 	
-	@RequestMapping("/mentorskills/{skill}")
-	public List<MentorSkills> getSkills(@PathVariable String skill) {
-	return mss.getSkills(skill);
+	@RequestMapping("/mentorskills/{techId}")
+	public List<MentorSkills> getSkills(@PathVariable Integer techId) {
+	return mss.getSkills(techId);
 	}
 
-	@RequestMapping("/mentorcalender/{mentor}/{timeslot}")
+	@RequestMapping("/mentorcalendar/{mentor}/{timeslot}")
 	public MentorCalendar getCalender(@PathVariable Integer mentor, @PathVariable String timeslot) {
 		return mcs.getCalendar(timeslot, mentor);
 	}

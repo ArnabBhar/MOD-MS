@@ -19,15 +19,15 @@ public class Technology {
 	@Column(name="tech_name")
 	private  String techName;
 	@Column(name="tech_fee")
-	private  String techFee;
+	private  float techFee;
 	@Column(name="tech_commission")
-	private  String techCommission;
+	private  float techCommission;
 
 	public Technology() {
 		super();
 	}
 
-	public Technology(String techName, String techFee, String techCommission) {
+	public Technology(String techName, float techFee, float techCommission) {
 		this.techName = techName;
 		this.techFee = techFee;
 		this.techCommission = techCommission;
@@ -45,19 +45,19 @@ public class Technology {
 		this.techName = techName;
 	}
 
-	public String getTechFee() {
+	public float getTechFee() {
 		return techFee;
 	}
 
-	public void setTechFee(String techFee) {
+	public void setTechFee(float techFee) {
 		this.techFee = techFee;
 	}
 
-	public String getTechCommission() {
+	public float getTechCommission() {
 		return techCommission;
 	}
 
-	public void setTechCommission(String techCommission) {
+	public void setTechCommission(float techCommission) {
 		this.techCommission = techCommission;
 	}
 }

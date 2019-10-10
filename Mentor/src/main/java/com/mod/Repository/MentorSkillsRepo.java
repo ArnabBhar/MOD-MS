@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface MentorSkillsRepo extends CrudRepository<MentorSkills, Integer>{
 
-    @Query(value="select * from mentor_skills m where m.skill_name = ?1",nativeQuery = true)
-    List<MentorSkills> getSkills(String skillName);
+    @Query(value="select * from mentor_skills m where m.tech_id = ?1",nativeQuery = true)
+    List<MentorSkills> getSkills(Integer techId);
 
 }
