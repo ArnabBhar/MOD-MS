@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Spring",
+        "titleTrainer": "Mrs.",
+        "trainer": "Mousumi Dutt",
+        "titleTrainee": "Mr.",
+        "trainee": "Pritam Banerjee",
+        "fee": "30,000",
+        "paymentDate": "18-06-2019"
+    },
+    {
+        "name": "MySQL",
+        "titleTrainer": "Mr.",
+        "trainer": "Debashis Chakraborty",
+        "titleTrainee": "Ms.",
+        "trainee": "Anwesha Gupta",
+        "fee": "20,000",
+        "paymentDate": "18-07-2019"
+    }
+]

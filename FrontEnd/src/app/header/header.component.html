@@ -1,0 +1,45 @@
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Header section -->
+<header class="header-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="site-logo">
+                    <a href=#><img src=".././../assets/img/logo.png" alt=""></a>
+                </div>
+                <a href=#><strong id="logoName">Mentor On Demand</strong></a>
+                <div class="nav-switch">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <span *ngIf="logIn.loginName=='guest'">
+                    <a routerLink="/login" class="site-btn header-btn">Log In</a>
+                </span>
+                <span *ngIf="logIn.loginName=='loggedIn'">
+                    <a routerLink="" (click)="logOut()" class="site-btn header-btn">Log Out</a>
+                </span>
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <span *ngIf="logIn.loginName=='guest'">
+                                <a routerLink="/">Home</a>
+                            </span>
+                            <span *ngIf="logIn.loginName=='loggedIn'">
+                                <a routerLink="/">Home</a>
+                            </span>
+                        </li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header section end -->

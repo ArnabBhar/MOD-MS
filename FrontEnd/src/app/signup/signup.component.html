@@ -1,0 +1,190 @@
+<!-- Hero section -->
+<section class="hero-section set-bg" data-setbg="img/bg.jpg">
+    <div class="container">
+        <div class="hero-text">
+            <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#trainee-reg">Trainee
+                        Registration</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#trainer-reg">Trainer Trainings</a>
+                </li>
+            </ul>
+            <br>
+            <div class="tab-content">
+                <div id="trainee-reg" class="tab-pane fade show active">
+                    <div class="row  justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form name="formTrainee" [formGroup]="userSignUp" (ngSubmit)="userSignUpFun()">
+                                        <div class="form-group row">
+                                            <label for="fullName" class="col-md-4 col-form-label text-md-right">Full
+                                                Name</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="fullName" class="form-control"
+                                                    formControlName="fullName">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail
+                                                Address</label>
+                                            <div class="col-md-6">
+                                                <input type="email" id="email" class="form-control"
+                                                    formControlName="email">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group row">
+                                            <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">Phone
+                                                Number</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="phoneNumber" class="form-control"
+                                                    formControlName="phoneNumber">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="present_address"
+                                                class="col-md-4 col-form-label text-md-right">Present Address</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="present_address" class="form-control"
+                                                    formControlName="presentAddress">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="permanent_address"
+                                                class="col-md-4 col-form-label text-md-right">Permanent Address</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="permanent_address" class="form-control"
+                                                    formControlName="permanentAddress">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="nid_number" class="col-md-4 col-form-label text-md-right"><abbr
+                                                    title="National Id Card">NID</abbr> Number</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="nid_number" class="form-control"
+                                                    formControlName="nidNumber">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="password"
+                                                class="col-md-4 col-form-label text-md-right">Password</label>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" formControlName="password"
+                                                    id="password">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 offset-md-4">
+                                            <input value="Register" type="submit" class="btn btn-primary" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="trainer-reg" class="tab-pane fade">
+                    <div class="row  justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form name="formTrainer" [formGroup]="mentorSignUp" (ngSubmit)="mentorSignUpFun()">
+                                        <div class="form-group row">
+                                            <label for="full_name" class="col-md-4 col-form-label text-md-right">Full
+                                                Name</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="full_name" class="form-control"
+                                                    formControlName="fullName">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="email_address"
+                                                class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                            <div class="col-md-6">
+                                                <input type="email" id="email_address" class="form-control"
+                                                    formControlName="email">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-group row">
+                                            <label for="phone_number"
+                                                class="col-md-4 col-form-label text-md-right">Phone Number</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="phone_number" class="form-control"
+                                                    formControlName="phoneNumber">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group row">
+                                            <label for="year_exp" class="col-md-4 col-form-label text-md-right">Years Of
+                                                Experience</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="year_exp" class="form-control"
+                                                    formControlName="yearExp">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group row">
+                                            <label for="present-address"
+                                                class="col-md-4 col-form-label text-md-right">Present Address</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="present-address" class="form-control"
+                                                    formControlName="presentAddress">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="permanent-address"
+                                                class="col-md-4 col-form-label text-md-right">Permanent Address</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="permanent-address" class="form-control"
+                                                    formControlName="permanentAddress">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="nid-number" class="col-md-4 col-form-label text-md-right"><abbr
+                                                    title="National Id Card">NID</abbr> Number</label>
+                                            <div class="col-md-6">
+                                                <input type="text" id="nid-number" class="form-control"
+                                                    formControlName="nidNumber">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label for="pass_word"
+                                                class="col-md-4 col-form-label text-md-right">Password</label>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" formControlName="password"
+                                                    id="pass_word">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 offset-md-4">
+                                            <input value="Register" type="submit" class="btn btn-primary" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero section end -->

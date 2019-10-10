@@ -1,0 +1,62 @@
+<!-- Hero section -->
+<section class="hero-section set-bg">
+    <div class="container">
+        <div class="hero-text">
+            <div class="row  justify-content-center" id="content">
+                <aside class="col-sm-4">
+                    <div class="card">
+                        <article class="card-body">
+                            <a routerLink="/signup" class="float-right btn btn-outline-primary">Sign up</a>
+                            <h4 class="card-title mb-4 mt-1">Sign in</h4>
+                            <form [formGroup]="loginDetails" (ngSubmit)="login()">
+                                <div class="form-group">
+                                    <label for="username">Username/e-mail :</label>
+                                    <input id="username" class="form-control" placeholder="example@mail.com"
+                                        type="email" formControlName="username">
+                                </div>
+                                <!-- form-group// -->
+                                <div class="form-group">
+                                    <label for="password">Password :</label>
+                                    <input id="password" class="form-control" placeholder="********" type="password"
+                                        formControlName="password">
+                                </div>
+                                <!-- form-group// -->
+                                <div class="form-group">
+                                    <label for="account-type">Select account type :</label>
+                                    <select class="form-control" id="account-type" (change)="selectUser($event)"
+                                        formControlName="accountType">
+                                        <option value="" selected>-- select account type --</option>
+                                        <option value="Trainee">Trainee</option>
+                                        <option value="Trainer">Trainer</option>
+                                        <option value="Admin">Admin</option>
+                                    </select>
+                                </div>
+                                <!-- form-group// -->
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                                </div>
+                                <!-- form-group// -->
+                            </form>
+                        </article>
+                    </div>
+                    <!-- card.// -->
+
+                </aside>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="banner-section spad">
+    <div class="container">
+        <div class="section-title mb-0 pb-2">
+            <h2>Join Our Community Now!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris
+                scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+        </div>
+        <div class="text-center pt-5">
+            <a routerLink="/signup" class="site-btn">Register Now</a>
+        </div>
+    </div>
+</section>

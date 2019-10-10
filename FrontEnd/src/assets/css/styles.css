@@ -1,0 +1,102 @@
+head,
+body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+#footer {
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+    padding: 15px;
+}
+
+#logo-header {
+    background: #007bff;
+    background: linear-gradient(to left, #0062E6, #33AEFF);
+    padding: 10px;
+    padding-left: 40px;
+}
+
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-brand {
+    color: white;
+}
+
+.navbar-brand {
+    color: black;
+    padding-left: 10px;
+    font-family: 'Minion';
+    font-weight: bolder;
+    font-size: 25px !important;
+}
+
+#logo {
+    width: 60px;
+    height: 50px;
+}
+
+#logo-text {
+    padding-top: 5px;
+}
+
+.fas {
+    font-size: 20px;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+
+#content {
+    height: 500px;
+}
+
+#search,
+#mentor {
+    padding: 20px;
+}
+
+.input-group.md-form.form-sm.form-2 input.red-border {
+    border: 1px solid blue;
+}
+
+#search-result,
+#training-result {
+    margin-top: 30px;
+    display: none;
+}
+
+#search-body,
+#mentor-body {
+    height: 467px;
+    margin-top: 20px;
+}
+
+.card-img {
+    height: 170px;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 6px;
+}
+
+#user-menu,
+#mentor-nemu {
+    margin-top: 10px;
+}
+
+#menu-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.top-buffer {
+    margin-top: 30px;
+}

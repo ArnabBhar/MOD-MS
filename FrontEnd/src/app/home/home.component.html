@@ -1,0 +1,81 @@
+<!-- Hero section -->
+<section class="hero-section set-bg">
+    <div class="container">
+        <div class="hero-text text-white">
+            <h2>Get The Best Free Online Courses</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris
+                scelerisque, at rutrum nulla <br> dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+        </div>
+    </div>
+</section>
+<!-- Hero section end -->
+
+<!-- search section -->
+<section class="search-section">
+    <div class="container">
+        <div class="search-warp">
+            <div class="section-title text-white">
+                <h2>Search your course</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <!-- search form -->
+                    <form class="course-search-form" name="searchForm">
+                        <input type="text" [(ngModel)]="courseName" class="last-m" placeholder="Course"
+                            name="search-result">
+                        <input type="submit" (click)="searchCourse()" class="site-btn" value="Search Couse">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- search section end -->
+
+<!--Search Result Start-->
+<div class="container" *ngIf="flag">
+    <div class="row justify-content-center">
+        <h2>Spring Mentor's</h2>
+    </div>
+
+    <div class="row justify-content-center">
+        <div *ngFor="let data of mentorData">
+            <div class="col">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src={{data.pic}} class="card-img" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{data.title}} {{data.name}}</h5>
+                                <p class="card-text">Years of Experience &emsp;&emsp;&ensp;&ensp;: {{data.years}} years
+                                </p>
+                                <p class="card-text">No of trainings Delivered &nbsp;: {{data.totalTraining}}</p>
+                                <p class="card-text">Fees Charge &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;: &#8377;
+                                    {{data.fees}} </p>
+                                <a routerLink="/login" class="btn btn-primary">Book for training</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search Result End-->
+
+<!-- banner section -->
+<section class="banner-section spad">
+    <div class="container">
+        <div class="section-title mb-0 pb-2">
+            <h2>Join Our Community Now!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris
+                scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+        </div>
+        <div class="text-center pt-5">
+            <a routerLink="/signup" class="site-btn">Register Now</a>
+        </div>
+    </div>
+</section>
+<!-- banner section end -->

@@ -1,0 +1,24 @@
+[
+    {
+        "username": "duttamousumi@gmail.com",
+        "password": "duttamousumi@gmail.com",
+        "name": "Mousumi Dutt",
+        "title": "Mrs.",
+        "years": 2,
+        "totalTraining": 4,
+        "fees": "3,500",
+        "pic": ".././../assets/img/Female.jpg",
+        "status": "blocked"
+    },
+    {
+        "username": "debashisC@gmail.com",
+        "password": "debashisC@gmail.com",
+        "name": "Debashis Chakraborty",
+        "title": "Mr.",
+        "years": 12,
+        "totalTraining": 23,
+        "fees": "6,500",
+        "pic": ".././../assets/img/Male.jpg",
+        "status": "unblocked"
+    }
+]

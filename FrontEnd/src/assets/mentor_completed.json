@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Spring",
+        "title": "Mr.",
+        "trainee": "Akshay Anand",
+        "doc": "09 - 07 - 2019",
+        "rating": "8.9/10"
+    },
+    {
+        "name": "Full Stack",
+        "title": "Mr.",
+        "trainee": "Nishat Khan",
+        "doc": "26 - 03 - 2019",
+        "rating": "8.4/10"
+    },
+    {
+        "name": "Core Java",
+        "title": "Mr.",
+        "trainee": "Swarnava Saha",
+        "doc": "02 - 06 - 2018",
+        "rating": "7.8/10"
+    }
+]

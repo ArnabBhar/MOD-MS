@@ -1,0 +1,265 @@
+<section class="hero-section set-bg">
+    <div class="container" *ngIf="logIn.loginName=='guest'">
+        <div class="hero-text">
+            <div id="search-body">
+                <h3 class="text-white">Please LogIn to See Details</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container" *ngIf="logIn.loginName=='loggedIn'">
+        <div class="hero-text">
+            <div id="search-body">
+                <div class="row justify-content-center">
+                    <ul class="nav nav-pills nav-fill text-white" id="user-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectTab(1)"> Search </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectTab(2)"> Training in Progress</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" (click)="selectTab(3)">Completed Training</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div *ngIf="searchFlag" class="row  justify-content-center" id="search">
+                    <div class="col-md-4">
+                        <form name="searchForm" action="" onsubmit="return search_result()">
+                            <div class="input-group md-form form-sm form-2 pl-0">
+                                <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
+                                    aria-label="Search" name="search-result">
+                                <div class="input-group-append">
+                                    <button type="submit" class="input-group-text red lighten-3" id="basic-text1"
+                                        value="Search">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="container" id="search-result" *ngIf="searchFlag">
+                    <div class="row justify-content-center">
+                        <h2 class="text-white">Available Spring Mentor's</h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div *ngFor="let data of mentorData">
+                            <div class="col">
+                                <div class="card mb-3" style="max-width: 540px;">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src={{data.pic}} class="card-img" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{data.title}} {{data.name}}</h5>
+                                                <p class="card-text">Years of Experience &emsp;&emsp;&ensp;&ensp;:
+                                                    {{data.years}} years
+                                                </p>
+                                                <p class="card-text">No of trainings Delivered &nbsp;:
+                                                    {{data.totalTraining}}</p>
+                                                <p class="card-text">Fees Charge
+                                                    &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;:
+                                                    &#8377; {{data.fees}} </p>
+                                                <button class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#myModal">Book for training</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Confirm Booking</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Confirm your booking for the Spring Mentor.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-success" data-dismiss="modal"
+                                            data-toggle="modal" data-target="#confirmModal">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="confirmModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Booking Confirmed</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Booking confirmed for the Spring Mentor.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div *ngIf="userFlag">
+                    <br>
+                    <div class="row">
+                        <div class="col card mt-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src=".././../assets/img/Java.jpg" width="150px" height="150px"
+                                            class="rounded float-left" alt="">
+                                    </div>
+                                    <div class="col text-left pt-3">
+                                        <strong>Course : </strong> Java<br>
+                                        <strong>Trainer : </strong> Debashis Chakraborty<br>
+                                        <strong>Status : </strong> Waiting for Confirmation<br />
+                                        <br /><button class="btn btn-secondary disabled">Make payment</button>
+                                        <button type="button" class="btn btn-danger">Cancel Course</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col card mt-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src=".././../assets/img/MySql.png" width="150px" height="150px"
+                                            class="rounded float-left" alt="">
+                                    </div>
+                                    <div class="col text-left pt-3">
+                                        <strong>Course : </strong> MySQL<br>
+                                        <strong>Trainer : </strong> Samrat Sarkar<br>
+                                        <strong>Status : </strong>Training in Progress<br>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                                role="progressbar" aria-valuenow="63" aria-valuemin="0"
+                                                aria-valuemax="100" style="width: 63%">63%</div>
+                                        </div><br>
+                                        <button type="button" class="btn btn-info" data-toggle="modal"
+                                            data-target="#exampleModal">Update Training Status</button><br><br>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Update Progress
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <input type="range" min="1" max="100" value="50" class="slider"
+                                                            id="myRange" style="width: 100%">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary"
+                                                            data-dismiss="modal">Update</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-px-2">
+                                        <button type="button" class="btn btn-success">Resume Course</button>
+                                        <button type="button" class="btn btn-info">Rate trainer</button>
+                                        <button type="button" class="btn btn-danger">Cancel Course</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col card mt-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src=".././../assets/img/Spring.png" width="150px" height="150px"
+                                            class="rounded float-left" alt="">
+                                    </div>
+                                    <div class="col text-left pt-3">
+                                        <strong>Course : </strong> Spring<br>
+                                        <strong>Trainer : </strong> Mousumi Dutt<br>
+                                        <strong>Status : </strong> Training Confirmed<br /> Payment Successful.<br><br>
+                                        <button type="button" class="btn btn-success">Start Course</button>
+                                        <button type="button" class="btn btn-danger">Cancel Course</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col card mt-2">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src=".././../assets/img/Angular.png" width="150px" height="150px"
+                                            class="rounded float-left" alt="">
+                                    </div>
+                                    <div class="col text-left pt-3">
+                                        <strong>Course : </strong> Angular<br>
+                                        <strong>Trainer : </strong> Karthik<br>
+                                        <strong>Status : </strong> Training Confirmed.<br /> Payment Pending.<br><br>
+                                        <button type="button" class="btn btn-success">Make payment</button>
+                                        <button type="button" class="btn btn-danger">Cancel Course</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div *ngIf="userCompleteFlag">
+                    <div class="row justify-content-center py-5">
+                        <div *ngFor="let user of userData">
+                            <div class="col">
+                                <div class="card mt-2">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <img src={{user.pic}} width="150px" height="150px"
+                                                    class="rounded float-left" alt="">
+                                            </div>
+                                            <div class="col text-left pt-3">
+                                                <strong> Course : </strong> {{user.name}}<br>
+                                                <strong> Trainer : </strong>{{user.title}} {{user.trainer}}<br>
+                                                <strong> Date of completion : </strong> {{user.doc}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

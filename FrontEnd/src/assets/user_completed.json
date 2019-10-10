@@ -1,0 +1,16 @@
+[
+    {
+        "name": "HTML",
+        "title": "Mr.",
+        "trainer": "Amit Paul",
+        "doc": "Jun 18, 2018",
+        "pic": ".././../assets/img/html.png"
+    },
+    {
+        "name": "CSS",
+        "title": "Mr.",
+        "trainer": "Amit Paul",
+        "doc": "Aug 18, 2018",
+        "pic": ".././../assets/img/Css.png"
+    }
+]

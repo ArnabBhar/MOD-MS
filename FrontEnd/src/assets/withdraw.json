@@ -1,0 +1,26 @@
+[
+    {
+        "trainee": "Akshay Anand",
+        "course": "Spring",
+        "completed": "100%",
+        "payments": "3",
+        "pending": "1",
+        "pic": ".././../assets/img/Spring.png"
+    },
+    {
+        "trainee": "Anwesha Gupta",
+        "course": "MySQL",
+        "completed": "63%",
+        "payments": "2",
+        "pending": "2",
+        "pic": ".././../assets/img/MySql.png"
+    },
+    {
+        "trainee": "Arnab Bhar",
+        "course": "Spring",
+        "completed": "0%",
+        "payments": "0",
+        "pending": "4",
+        "pic": ".././../assets/img/Spring.png"
+    }
+]

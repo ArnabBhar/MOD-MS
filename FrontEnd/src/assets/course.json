@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Spring",
+        "fee": "30,000",
+        "capacity": "22"
+    },
+    {
+        "name": "Angular",
+        "fee": "40,000",
+        "capacity": "18"
+    },
+    {
+        "name": "MySQL",
+        "fee": "20,000",
+        "capacity": "30"
+    }
+]
