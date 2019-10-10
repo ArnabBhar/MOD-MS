@@ -1,7 +1,6 @@
 package com.mod;
 
 import com.mod.entity.AdminEntity;
-import com.mod.repository.AdminRepository;
 import com.mod.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -11,7 +10,6 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin")
 public class AdminController {
 
     @Autowired
@@ -22,13 +20,8 @@ public class AdminController {
         adminService.create(admin);
     }
 
-//    @PutMapping("/update-admin")
-//    public void updateAdmin(@Valid @RequestBody AdminEntity admin)
-//    {
-//        adminService.update(admin);
-//    }
 
-    @GetMapping("/")
+    @GetMapping("/admin-list")
     public List<AdminEntity> getAdmin(){
         return adminService.getAll();
     }
