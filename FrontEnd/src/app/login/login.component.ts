@@ -63,18 +63,9 @@ export class LoginComponent implements OnInit {
             this.logIn.loginName = 'loggedIn';
             this.router.navigate(['/trainee']);
             return true;
+          } else {
+            alert("wrong credentials");
           }
-          // this.http.get('/assets/users.json').subscribe(userdata => {
-          //   this.userData = userdata;
-          //   for (let i = 0; i < 1; i++) {
-          //     if (this.userData[i].username == this.loginDetails.get('username').value && this.userData[i].password == this.loginDetails.get('password').value) {
-          //       this.logIn.loginName = 'loggedIn';
-          //       this.router.navigate(['/trainee']);
-          //       return true;
-          //     }
-          //   }
-          //   alert("wrong credentials");
-          // });
         } else if (this.actor.actorType == 'Trainer') {
           if (this.loginDetails.get('username').value == this.actor.actorEmail && this.loginDetails.get('password').value == this.actor.actorPassword) {
             this.logIn.getMentorCred(this.actor.actorEmail).subscribe(data => {
@@ -83,37 +74,20 @@ export class LoginComponent implements OnInit {
             this.logIn.loginName = 'loggedIn';
             this.router.navigate(['/mentor']);
             return true;
+          } else {
+            alert("wrong credentials");
           }
         }
-        // if (this.selectedUser === 'Trainer') {
-        //   this.http.get('/assets/mentor.json').subscribe(userdata => {
-        //     this.userData = userdata;
-        //     for (let i = 0; i < 1; i++) {
-        //       if (this.userData[i].username == this.loginDetails.get('username').value && this.userData[i].password == this.loginDetails.get('password').value) {
-
-        //         this.logIn.loginName = 'loggedIn';
-        //         this.router.navigate(['/mentor']);
-        //         return true;
-        //       }
-        //     }
-        //     alert("wrong credentials");
-        //   });
-        // }
-      }
-    })
-
-    if (this.selectedUser === 'Admin') {
-      this.http.get('/assets/admin.json').subscribe(userdata => {
-        this.userData = userdata;
-        for (let i = 0; i < 1; i++) {
-          if (this.userData[i].username == this.loginDetails.get('username').value && this.userData[i].password == this.loginDetails.get('password').value) {
+        else if (this.selectedUser === 'Admin') {
+          if (this.loginDetails.get('username').value == this.actor.actorEmail && this.loginDetails.get('password').value == this.actor.actorPassword) {
             this.logIn.loginName = 'loggedIn';
             this.router.navigate(['/admin']);
             return true;
+          } else {
+            alert("wrong credentials");
           }
         }
-        alert("wrong credentials");
-      });
-    }
+      }
+    })
   }
 }
